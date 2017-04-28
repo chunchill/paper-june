@@ -1,0 +1,59 @@
+% ------------------------------------------
+%  IEEE ARTICLE TEMPLATE
+% ------------------------------------------
+% Author(s):
+% Institution(s):
+% ------------------------------------------
+\documentclass[journal,twocolumn,letterpaper,10pt]{ieee-sty/IEEEtran}
+\usepackage[acronym]{glossaries}
+\usepackage{indentfirst}
+\usepackage{url}
+% Generates the acronyms list
+\makeglossaries
+
+% Acronyms list
+\input{acronyms/acronyms.tex}
+
+% ------------------------------------------
+%  MAIN DOCUMENT
+% ------------------------------------------
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{algorithm} %format of the algorithm 
+\usepackage{algorithmic} %format of the algorithm 
+\usepackage{multirow} %multirow for format of table 
+\usepackage{amsmath} 
+\usepackage{xcolor}
+\usepackage{tabu} 
+\begin{document}
+
+% Variables file
+\input{variables.tex}
+
+% Article title
+\title{\Title}
+
+% Author(s) Name
+\author{\Authors\\
+        \Institutions}
+
+\maketitle
+
+% Abstract
+\input{abstract/abstract.tex}
+
+% Keywords
+\input{keywords/keywords.tex}
+
+% Sections
+\input{sections/main.tex}
+
+
+\if\hasBibliography 1
+% Bibliography
+\bibliographystyle{IEEEtran}
+% Bibliography file
+\bibliography{bibliography/article}
+\fi
+
+\end{document}
